@@ -14,5 +14,4 @@ export class PluralPipe implements PipeTransform {
     	return value+ " upvotes"
     }
   }
-
 }
