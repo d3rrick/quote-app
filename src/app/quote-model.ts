@@ -26,4 +26,4 @@ export class Quote {
 		this.downvotes++
 	}
 
-}
+}+

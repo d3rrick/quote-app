@@ -18,7 +18,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 
 ## Procedure for the application development
-+ Creating the project using *ng new Quote* to initialize the angular App
++ Creatxz ing the project using *ng new Quote* to initialize the angular App
 + Creating a new component using *ng g c quote* for example
 + creating a models class to instantiate new quote instances.
 + creating a custom directive for highlighting quotes with highest votes
