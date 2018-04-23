@@ -13,11 +13,9 @@ import { Quote } from '../quote-model'
 })
 export class QuoteComponent implements OnInit {
   @Input() quotes
-
   	sortedQuote(): Quote[] {
      return this.quotes.sort((a, b) => b.upvotes - a.upvotes)
    }
-
   constructor() { 
     this.quotes = []
   }
@@ -36,7 +34,6 @@ export class QuoteComponent implements OnInit {
   	this.quotes.splice(id)
    }
   getColor(id:number){
-  	// return this.quotes[id].upvotes>=5?'green':'red'
   	if(this.quotes[id].upvotes > this.quotes[id].downvotes){
   		return 'green'
   	}else if(this.quotes[id].downvotes >this.quotes[id].upvotes){
@@ -44,7 +41,6 @@ export class QuoteComponent implements OnInit {
   	}else{
   		return 'magenta'
   	}
-
  }
  seeThis(id){
  	return Math.max(...this.quotes[id].upvotes)
