@@ -1,23 +1,21 @@
 
-
-
-
-
-
 import { Component, OnInit, Input} from '@angular/core';
+import {ServeDataService} from '../serve-data.service'
 import { Quote } from '../quote-model'
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
-  styleUrls: ['./quote.component.css']
+  styleUrls: ['./quote.component.css'],
+   providers : [ServeDataService]
 })
 export class QuoteComponent implements OnInit {
   @Input() quotes
   	sortedQuote(): Quote[] {
      return this.quotes.sort((a, b) => b.upvotes - a.upvotes)
    }
-  constructor() { 
+  constructor(private senddata:ServeDataService) { 
     this.quotes = []
+    this.senddata
   }
   ngOnInit() {
   }
@@ -31,6 +29,7 @@ export class QuoteComponent implements OnInit {
   	
   }
   delete(id:number){
+    this.senddata.logData("deleting the quote titles:"+ this.quotes[id].quote)
   	this.quotes.splice(id)
    }
   getColor(id:number){
