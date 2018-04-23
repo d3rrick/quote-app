@@ -1,5 +1,5 @@
 # Quote App
-#### My Blog created on, 20.04.2018
+#### Quote app created on, 20.04.2018
 #### By **Derrick**
 
 ## Description
