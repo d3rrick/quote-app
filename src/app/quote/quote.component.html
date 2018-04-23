@@ -1,28 +1,21 @@
 <div class="container">
-<div class="row myrow" *ngFor="let quote of sortedQuote(); let i = index" [ngStyle]="{backgroundColor: getColor(i)}">
+	<div class="row myrow" *ngFor="let quote of sortedQuote(); let i = index" [ngStyle]="{backgroundColor: getColor(i)}">
 		<div class="col-md-4" >
 			<h1>{{quote.upvotes | plural}}</h1>
-			
 			<h2>Category</h2>
 			{{quote.category}}
 		</div>
 		<div  class="col-md-8">
-          			<blockquote class="blockquote text-center">
-			  <p appHighlight *ngIf="i == 0 && quote.upvotes>=1">{{quote.quote}}.</p>
-
-			  <footer id="auth" class="blockquote-footer">{{quote.author }}<cite title="author"> author</cite></footer>
-			  <footer>posted by {{quote.name }} -- {{quote.dateAdded|lapseTime}} on {{quote.dateAdded|date}}</footer>
-			</blockquote>
-    
-
-			<button class="btn btn-success" (click)="voteUp(i)">upvote</button>
-			<span>{{quote.upvotes}}</span>
-			<button class="btn btn-default" (click)="voteDown(i)">downvote</button>
-			<span>{{quote.downvotes}}</span>
-
-			<button class="btn btn-danger" (click)="delete(i)">delete</button>
-
-		</div>
-	</div>
-
+			<blockquote class="blockquote text-center">
+				<p appHighlight *ngIf="i == 0 && quote.upvotes>=1">{{quote.quote}}.</p>
+			<footer id="auth" class="blockquote-footer">{{quote.author }}<cite title="author"> author</cite></footer>
+		<footer>posted by {{quote.name }} -- {{quote.dateAdded|lapseTime}} on {{quote.dateAdded|date}}</footer>
+	</blockquote>
+	<button class="btn btn-success" (click)="voteUp(i)">upvote</button>
+	<span>{{quote.upvotes}}</span>
+	<button class="btn btn-default" (click)="voteDown(i)">downvote</button>
+	<span>{{quote.downvotes}}</span>
+	<button class="btn btn-danger" (click)="delete(i)">delete</button>
+</div>
+</div>
 </div>
