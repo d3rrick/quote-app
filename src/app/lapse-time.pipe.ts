@@ -7,7 +7,6 @@ export class LapseTimePipe implements PipeTransform {
 
   transform(value: any): any{
     var now = new Date()
-  
     var seconds = (Math.round((now.getTime() - value.getTime())/1000))
     var minuites = Math.round(seconds/60)
     if(seconds <= 45){
