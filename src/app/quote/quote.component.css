@@ -1,0 +1,9 @@
+.myrow{
+	border: 1px solid black; 
+	background-color:magenta;
+	margin:10px;
+	padding:20px
+}
+#auth{
+	color:white;
+}
