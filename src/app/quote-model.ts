@@ -18,12 +18,10 @@ export class Quote {
 	this.downvotes = downvotes
 	this.category = category
 	}
-
 	upVote(){
 		this.upvotes++
 	}
 	downVote(){
 		this.downvotes++
 	}
-
-}+
+}
