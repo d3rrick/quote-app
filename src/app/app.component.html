@@ -18,7 +18,6 @@
           <label for="author">Author</label>
           
           <input type="text" class="form-control" #author='ngModel' placeholder="author" name="author" [ngModel]="defaultAuthor" required>
-          
         </div>
       </fieldset>
       <h4>Your Category </h4>
@@ -27,10 +26,8 @@
       </label>
     </div>
     <div class="form-group">
-      
       <button class="btn btn-info" [disabled]="!f.valid">post quote</button>
     </div>
-    
   </form>
 </div>
 <div class="col-md-8">
