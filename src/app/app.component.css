@@ -1,16 +1,7 @@
-
-.container-fluid{
-	margin-top: 10em;
-	background-color: beige;
-}
-
-form{
-	
-	padding:15em;
-	padding-top:5px;
-	margin-top:0px;
-	background-color: beige;
-	height:70vh;
-	position: fixed;
-	margin-left:0px
+h1{
+	color: orange;
+	text-align: center;
+	padding-top: 20px;
+	margin-top: 3vh;
+	font-size: 7vh;
 }
