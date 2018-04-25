@@ -6,10 +6,10 @@ import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { LapseTimePipe } from './lapse-time.pipe';
 import { HighlightDirective } from './highlight.directive';
-import { HeaderComponent } from './header/header.component';
 import { PluralPipe } from './plural.pipe';
-import {ServeDataService} from './serve-data.service'
-import {HttpModule} from '@angular/http'
+
+import {HttpModule} from '@angular/http';
+import { QuoteFormComponent } from './quote-form/quote-form.component';
 
 @NgModule({
   declarations: [
@@ -17,16 +17,16 @@ import {HttpModule} from '@angular/http'
     QuoteComponent,
     LapseTimePipe,
     HighlightDirective,
-    HeaderComponent,
-    PluralPipe
-  ],
+    PluralPipe,
+    QuoteFormComponent
+    ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     HttpModule
   ],
-  providers: [ServeDataService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,37 +1,6 @@
-<app-header></app-header>
-<div class="container-fluid" >
-<div class="row">
-  <div class="col-md-4">
-    <form (ngSubmit)=onAddQuote() #f='ngForm'>
-      <fieldset>
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input class="form-control" type="text" #name='ngModel' placeholder="your name" name='name' [ngModel]="defaultName" required>
-        </div>
-      </fieldset>
-      <div class="form-group">
-        <label for="quote">Quote</label>
-        <input type="text" class="form-control" #quote='ngModel' placeholder="enter quote here" name="quote" [ngModel]="defaultQuote" required>
-      </div>
-      <fieldset>
-        <div class="form-group">
-          <label for="author">Author</label>
-          
-          <input type="text" class="form-control" #author='ngModel' placeholder="author" name="author" [ngModel]="defaultAuthor" required>
-        </div>
-      </fieldset>
-      <h4>Your Category </h4>
-      <div class="radio form-group" *ngFor="let cat of categories"><label>
-        <input type="radio" name="category" ngModel [value]="cat" required >{{cat}}
-      </label>
-    </div>
-    <div class="form-group">
-      <button class="btn btn-info" [disabled]="!f.valid">post quote</button>
-    </div>
-  </form>
+<div class="container-fluid">
+<div>
+<h1 class="btn-info">Share your quote today.....</h1>
 </div>
-<div class="col-md-8">
-<app-quote [quotes]='quotes'></app-quote>
-</div>
-</div>
+<app-quote></app-quote>
 </div>
