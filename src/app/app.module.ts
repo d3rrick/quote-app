@@ -10,6 +10,7 @@ import { PluralPipe } from './plural.pipe';
 
 import {HttpModule} from '@angular/http';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { QuoteDetailsComponent } from './quote/quote-details/quote-details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
     LapseTimePipe,
     HighlightDirective,
     PluralPipe,
-    QuoteFormComponent
+    QuoteFormComponent,
+    QuoteDetailsComponent
     ],
   imports: [
     BrowserModule,
