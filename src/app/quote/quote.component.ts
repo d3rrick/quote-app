@@ -18,17 +18,17 @@ export class QuoteComponent implements OnInit {
   	sortedQuote(): Quote[] {
      return this.quotes.sort((a, b) => b.upvotes - a.upvotes)
    }
-  voteUp(id:number){
-  	this.quotes[id].upVote()
+  // voteUp(id:number){
+  // 	this.quotes[id].upVote()
 
-  }
-  voteDown(id:number){
-  	this.quotes[id].downVote()
+  // }
+  // voteDown(id:number){
+  // 	this.quotes[id].downVote()
   	
-  }
-  delete(id:number){
-  	this.quotes.splice(id,1)
-   }
+  // }
+  // delete(id:number){
+  // 	this.quotes.splice(id,1)
+  //  }
 
   constructor() { 
     this.quotes = []

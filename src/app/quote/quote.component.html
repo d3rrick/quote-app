@@ -3,31 +3,8 @@
 	<app-quote-form (mydata)="receivedObj($event)"></app-quote-form>
 </div>
 <div id="two" class="col-md-8" >
-	<div id="myrow" class="row" *ngFor="let quote of sortedQuote(); let i = index">
-		<div class="col-md-4" id="side">
-			<h1>{{quote.upvotes | plural}}</h1>
-			<h2>Category</h2>
-			{{quote.category}}
-		</div>
-		<div class="col-md-8" id="content">
-			<blockquote class="blockquote text-center">
-				<p appHighlight *ngIf="i == 0 && quote.upvotes>=1; else paragraphthis">{{quote.quote}}.</p>
-				<ng-template #paragraphthis>
-				{{quote.quote}}
-				</ng-template>
-				
-			<footer id="auth" class="blockquote-footer">{{quote.author }}<cite title="author"> author</cite></footer>
-		<footer>posted by {{quote.name }} -- {{quote.dateAdded|lapseTime}} on {{quote.dateAdded|date}}</footer>
-	</blockquote>
-	<button class="btn btn-success" (click)="voteUp(i)">upvote</button>
-	<span>{{quote.upvotes}}</span>
-	<button class="btn btn-default" (click)="voteDown(i)">downvote</button>
-	<span>{{quote.downvotes}}</span>
-	<button class="btn btn-danger" (click)="delete(i)">delete</button>
 
-	<app-quote-details >{{quote}}</app-quote-details>
-
-</div>
+<app-quote-details [quotes]="sortedQuote()" ></app-quote-details>
 
 </div>
 </div>

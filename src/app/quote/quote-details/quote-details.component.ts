@@ -7,11 +7,22 @@ import {Quote} from '../../quote-model'
 })
 export class QuoteDetailsComponent implements OnInit {
 
-   @Input() quote: Quote;
-  
+   @Input() quotes;
+  voteUp(id:number){
+  	this.quotes[id].upVote()
+
+  }
+  voteDown(id:number){
+  	this.quotes[id].downVote()
+  	
+  }
+  delete(id:number){
+  	this.quotes.splice(id,1)
+   }
+
 
   constructor() { 
-  console.log(this.quote)
+
 }
 
   ngOnInit() {
